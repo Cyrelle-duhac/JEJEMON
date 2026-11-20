@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our First Monthsary ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND DECORATIONS -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- MUSIC PLAYER -->
+  <audio id="bgMusic" loop>
+    <!-- ADD YOUR MUSIC FILE HERE:
+         Put your MP3 inside the music folder.
+         Example: music/song.mp3
+    -->
+    <source src="music/Ikaw At Ako - TJ Monterde _ Piano Cover by Gerard Chua.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    ♫ Play Music
+  </button>
+
+  <!-- PROGRESS INDICATOR -->
+  <div class="progress-container">
+    <div class="progress-bar">
+      <div id="progressFill"></div>
+    </div>
+    <p id="progressText">1 / 6</p>
+  </div>
+
+  <main class="container">
+
+    <!-- SCREEN 1: WELCOME -->
+    <section class="screen active" id="screen1">
+
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open your surprise" onclick="openEnvelope()" onkeydown="if(event.key === 'Enter' || event.key === ' ') openEnvelope()">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">💌</div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <span class="envelope-sparkle sparkle-one">✨</span>
+        <span class="envelope-sparkle sparkle-two">♡</span>
+        <span class="envelope-sparkle sparkle-three">💗</span>
+      </div>
+
+      <p class="tap-hint">Tap the envelope or the button below ♡</p>
+
+      <h1 class="greeting-title">Hiiii MAHALLLLLL!</h1>
+
+      <p>
+        I made a little something for you.
+        I hope this makes you smile. ♡
+      </p>
+
+      <button class="surprise-btn" onclick="openEnvelope()">
+        Open your surprise 💗
+      </button>
+
+    </section>
+
+
+    <!-- SCREEN 2: THE QUESTION -->
+    <section class="screen" id="screen2">
+
+      <div class="big-heart">🥺</div>
+
+      <h1>Do you love me?</h1>
+
+      <p>Choose wisely, mahal. Hehehe.</p>
+
+      <div class="button-area" id="buttonArea">
+
+        <button class="yes-btn" onclick="nextScreen(3)">
+          YES! 💗
+        </button>
+
+        <button class="no-btn" id="noBtn">
+          NO 😈
+        </button>
+
+      </div>
+
+      <p class="small-note">There's only one correct answer. HAHAHA</p>
+
+    </section>
+
+
+    <!-- SCREEN 3: REASONS -->
+    <section class="screen" id="screen3">
+
+      <div class="big-heart">💗</div>
+
+      <h1>Little reasons why...</h1>
+
+      <p>I'm grateful to have you in my life.</p>
+
+      <p class="small-note">
+        Tap each heart to reveal a message.
+      </p>
+
+      <div class="reasons">
+
+        <button class="heart-btn" onclick="showReason(0, this)">
+          ♡
+        </button>
+
+        <button class="heart-btn" onclick="showReason(1, this)">
+          ♡
+        </button>
+
+        <button class="heart-btn" onclick="showReason(2, this)">
+          ♡
+        </button>
+
+        <button class="heart-btn" onclick="showReason(3, this)">
+          ♡
+        </button>
+
+        <button class="heart-btn" onclick="showReason(4, this)">
+          ♡
+        </button>
+
+      </div>
+
+      <p id="reasonText" class="reason-message">
+        Pick a heart, mahal. ♡
+      </p>
+
+      <button onclick="nextScreen(4)">
+        Continue 💌
+      </button>
+
+    </section>
+
+
+    <!-- SCREEN 4: OUR MEMORIES -->
+    <section class="screen" id="screen4">
+
+      <div class="big-heart">📸</div>
+
+      <h1>Our little memories</h1>
+
+      <p>
+        Some moments are worth keeping forever.
+      </p>
+
+      <div class="gallery">
+
+        <!-- IMAGE 1: REPLACE photo1.jpg WITH YOUR PICTURE -->
+        <div class="photo-card">
+          <img src="images/1.jpg"
+               alt="Our first memory">
+          <p>One of my favorite moments ♡</p>
+        </div>
+
+        <!-- IMAGE 2: REPLACE photo2.jpg WITH YOUR PICTURE -->
+        <div class="photo-card">
+          <img src="images/2.jpg"
+               alt="Our special memory">
+          <p>A memory I'll always treasure ♡</p>
+        </div>
+
+        <!-- IMAGE 3: REPLACE photo3.jpg WITH YOUR PICTURE -->
+        <div class="photo-card">
+          <img src="images/3.jpg"
+               alt="Another special memory">
+          <p>More memories with you, please! ♡</p>
+        </div>
+
+      </div>
+
+      <button onclick="nextScreen(5)">
+        There's more... 💗
+      </button>
+
+    </section>
+
+
+    <!-- SCREEN 5: LOVE LETTER -->
+    <section class="screen" id="screen5">
+
+      <div class="big-heart">💌</div>
+
+      <h1>A letter for you</h1>
+
+      <div class="letter">
+
+        <p><strong>Hiluuuu, mahal!</strong> 💗</p>
+
+        <p>
+          Happyyyy 1st monthsary to our jejemonessss! AHAHAHAHAHA.
+        </p>
+
+        <p>
+          But seryusss, thank youuuu for liking me on Dating,
+          because if you hadn't done that, we wouldn't be
+          celebrating little moments like this.
+        </p>
+
+        <p>
+          Thank youuu for never making me feel insecure,
+          unlovable, or panget throughout our relationship.
+          Thank you for making me love myself more toooo and mahal,
+          thank you for being so sarap HAHAHAHAHAHA KIDDINGGG! 😭
+        </p>
+
+        <p>
+          But seriously, I'm really, really thankful to God
+          because He gave me someone who is pogi, sarap,
+          hardworking and such a loving person.
+        </p>
+
+        <p>
+          I hope you know how much I appreciate you, even in ways
+          I don't always get to express. I'm happy that I get to
+          experience these little moments with you, and I hope we
+          get to celebrate many more months together.
+        </p>
+
+        <p>
+          Thank you for choosing me, mahal. I'm so grateful
+          that it's you.
+        </p>
+
+        <p>
+          <strong>Happy 1st monthsary, my asawa! I love youuuuu!</strong> 💗
+        </p>
+
+      </div>
+
+      <button onclick="nextScreen(6)">
+        One last surprise... 🎁
+      </button>
+
+    </section>
+
+
+    <!-- SCREEN 6: FINAL SURPRISE -->
+    <section class="screen" id="screen6">
+
+      <div class="big-heart final-heart">❤️</div>
+
+      <h1>Happy First Monthsary MAHALLLL!!</h1>
+
+      <p>
+        One month down, and so many
+        beautiful memories waiting for us.
+      </p>
+
+      <h2>Here's to more months with you!</h2>
+
+      <p>
+        Thank you for being one of
+        my favorite parts of life.
+      </p>
+
+      <button onclick="showFinalSurprise()">
+        Open your last message 💌
+      </button>
+
+      <div id="finalMessage" class="final-message hidden">
+        <p><strong>And before you leave, mahal...</strong></p>
+        <p>
+          If there's one thing I want you to remember, it's that I'm
+          genuinely happy and grateful that I get to love you and
+          be loved by you.
+        </p>
+        <p>
+          I hope you never forget how handsome, special, and loved
+          you are in my eyes. I may not always say it perfectly,
+          but I appreciate you more than you know.
+        </p>
+        <p>
+          Here's to more bomburombombom, random laughter, gala gala,
+          silly arguments, sweet kisses, and little milestones together.
+        </p>
+        <p>
+          I hope this is just the first of many monthsaries we'll celebrate.
+        </p>
+        <p>
+          I love you so much, my favorite person. Always remember
+          that you're my answered prayer. ♡
+        </p>
+        <p><strong>Mwaaaaa! Happy monthsary, asawaaaaaa!</strong> 💗</p>
+      </div>
+
+      <button class="replay-btn" onclick="restartWebsite()">
+        Replay our little story ↻
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
